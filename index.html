@@ -10,7 +10,7 @@
     <meta name='keywords' content='frontend, developer, portfolio, helia marcos, web developer, webdesign'>
 
     <link rel='stylesheet' media='all' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' media="all" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Mono:300'>
     <link rel='icon' href='resources/favicon.png'>
@@ -38,13 +38,13 @@
                     <a href='#page-top'></a>
                 </li>
                 <li>
-                    <a href='#about'>About</a>
+                    <a class='page-scroll' href='#about'>About</a>
                 </li>
                 <li>
-                    <a href='#projects'>Projects</a>
+                    <a  class='page-scroll' href='#projects'>Projects</a>
                 </li>
                 <li>
-                    <a href='#contact'>Contact</a>
+                    <a class='page-scroll' href='#contact'>Contact</a>
                 </li>
             </ul>
         </nav>
@@ -65,20 +65,16 @@
         <div class='intro-body'>
             <div class='container'>
                 <div class='row'>
-                  <div class='col-sm-8 col-sm-offset-2'>
+                  <div class='col-md-8 col-md-offset-2'>
                     <h1 class='brand-heading'></h1>
                     <p class='intro-text'>Hello world! I'm Hélia, a newly made developer looking for an opportunity to learn and grow in front-end development.</p>
-                    <a class='js-show-modal' id='contact-link' href='#'><button class='btn-default'>Contact me</button></a>
-                  </div>
-                    <div class='col-sm-8 col-sm-offset-2'>
-                      <div class='scroll-down'>
-                        <a href='#about' class='btn btn-circle page-scroll'>
-                            <i class='fa fa-angle-double-down animated'></i>
-                        </a>
-                      </div>
+                    <a class='js-show-modal' id='contact-link' href='#'><button class='btn-default'>Say Hi!</button></a>
                   </div>
                 </div>
             </div>
+            <a href='#about' class='btn btn-circle page-scroll scroll-down hidden-xs'>
+                <i class='fa fa-angle-double-down animated'></i>
+            </a>
         </div>
     </header>
 
@@ -92,7 +88,7 @@
             </div>
             <div class='col-sm-5 col-sm-pull-1'>
               <h3>About me</h3>
-                <p>I'm a Photographer and Front-End Developer from Porto. I just finished an intensive Java and JavaScript programming bootcamp at <a href='http://academiadecodigo.org' target='_blank'>&lsaquo;Academia de Código_&rsaquo;</a>.</p>
+                <p>I'm a Photographer and Front-End Developer from Porto. I just finished a Java and JavaScript programming bootcamp at <a href='http://academiadecodigo.org' target='_blank'>&lsaquo;Academia de Código_&rsaquo;</a>.</p>
                 <p>If you want to know more details about my professional and academic path take a look at my <a href=''>CV</a>.</p>
           </div>
         </div>
@@ -147,7 +143,7 @@
     </section>
 
     <footer class='container-fluid text-center'>
-        <a class='up-arrow' href='#page-top' data-toggle='tooltip' title='to top'>
+        <a class='up-arrow page-scroll' href='#page-top'>
             <i class='fa fa-angle-up fa-lg'></i>
             <p></p>top
         </a>

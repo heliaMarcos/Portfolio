@@ -2,39 +2,40 @@
 //   DOCUMENT READY
 //-----------------------------------------------
 
+function collapseNavbar() {
+    if ($(".navbar").offset().top > 50) {
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    } else {
+        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+}
+
+$(window).scroll(collapseNavbar);
+$(document).ready(collapseNavbar);
+
 $(document).ready(function() {
 
   //-----------------------------------------------
-  //   Like
+  //   Scroll animation
   //-----------------------------------------------
 
-  $('.js-like').on('click', function(event) {
-    event.preventDefault();
-
-    $(this).text('Liked!')
-     .closest('.news-item')
-     .addClass('is-liked');
-  });
-
-  //-----------------------------------------------
-  //   Add Link
-  //-----------------------------------------------
-
-  $('.js-add-link').on('click', function(event) {
-    event.preventDefault();
-
-    $('.js-form').toggleClass('is-visible');
-  });
+  $('a.page-scroll').bind('click', function(event) {
+          var $anchor = $(this);
+          $('html, body').stop().animate({
+              scrollTop: $($anchor.attr('href')).offset().top
+          }, 1500, 'easeInOutExpo');
+          event.preventDefault();
+      });
 
   //-----------------------------------------------
   //   Modal
   //-----------------------------------------------
 
   $('.js-show-modal').on('click', function(event) {
-    event.preventDefault();
-
     $('.js-modal').addClass('is-visible');
     $('.js-modal-overlay').addClass('is-visible');
+    event.preventDefault();
+
   });
 
   $('.js-modal-overlay').on('click', function(event) {
