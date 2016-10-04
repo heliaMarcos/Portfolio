@@ -1,0 +1,433 @@
+/*************************************************
+*
+*   Blue (dark)   : #294D5B
+*   Blue (light)  : #3F7074
+*   Brown (light) : #DBCABF
+*   Brown (medium): #BE7C5C
+*   Dark          : #202629
+*   Gray (dark)   : #212121
+*   Gray (medium) : #727272
+*   Gray (light)  : #b6b6b6
+*
+*************************************************/
+
+
+/*-----------------------------------------------
+   Base
+-----------------------------------------------*/
+
+body {
+    background-color: #fff;
+    color: #202629;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    height: 100%;
+    line-height: 2;
+    width: 100%;
+    webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+h2, h3, h4, h5, h6 {
+    padding-bottom: 20px;
+    padding-top: 30px;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+a {
+    color: #BE7C5C;
+    transition: 0.3s ease-in-out;
+}
+a:active, a:hover, a:focus {
+    color: #3F7074;
+    text-decoration: none;
+    outline: none;
+}
+
+/*-----------------------------------------------
+   Navigation
+-----------------------------------------------*/
+
+.navbar-custom {
+    margin-bottom: 0;
+    font-family: 'Roboto Mono', Helvetica, Arial, monospace;
+    background-color: #3F7074;
+    opacity: 0.9;
+}
+.navbar-custom .navbar-toggle {
+    color: #BE7C5C;
+    background-color: #3F7074;
+    font-size: 12px;
+}
+.navbar-custom .navbar-toggle:focus, .navbar-custom .navbar-toggle:active {
+    outline: none;
+}
+.navbar-custom a {
+    color: #fff;
+}
+.navbar-custom .nav li a {
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.navbar-custom .navbar-nav a:hover {
+    color: #BE7C5C;
+    background-color: transparent;
+}
+.navbar-custom .navbar-brand {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.navbar-custom .navbar-brand:hover i.blinking {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+@media (min-width: 768px) {
+    .navbar-custom {
+        padding: inherit;
+        border-bottom: none;
+        letter-spacing: 1px;
+    }
+}
+
+/*-----------------------------------------------
+   Modal
+-----------------------------------------------*/
+
+.modal {
+    background-color: #fff;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 40px;
+    transform: translate(-50%, -5%);
+    transition: 0.4s ease-in-out;
+    visibility: hidden;
+    width: 500px;
+    z-index: 2;
+}
+.modal.is-visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    visibility: visible;
+}
+.modal-media {
+    position: relative;
+}
+.modal-media-title {
+    color: #fff;
+    bottom: 20px;
+    left: 20px;
+    font-size: 30px;
+    position: absolute;
+}
+.modal-content {
+    padding: 20px;
+}
+.modal-overlay {
+    background-color: #202629;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: 0.4s ease-in-out;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1;
+}
+.modal-overlay.is-visible {
+    opacity: 0.4;
+    visibility: visible;
+}
+
+/*-----------------------------------------------
+   Intro
+-----------------------------------------------*/
+
+.intro {
+    display: table;
+    background: url(../resources/background01.jpg) no-repeat top center fixed;
+    background-color: #D7CFBC;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #fff;
+
+}
+.intro .intro-body {
+    vertical-align: inherit;
+    top: 50%;
+    bottom: -50%;
+}
+.intro .intro-body .brand-heading {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.intro .intro-body .intro-text {
+    font-size: 22px;
+    padding: 100px auto;
+    margin-bottom: 30px;
+}
+
+/*-----------------------------------------------
+   Scroll Button
+-----------------------------------------------*/
+
+.btn-circle {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    padding: 7px 16px;
+    border: 1px solid white;
+    border-radius: 100% !important;
+    font-size: 35px;
+    color: white;
+    background: transparent;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+    outline: none;
+    column-fill: balance;
+    bottom: 20px;
+    transform: translateY(50%);
+}
+.btn-circle:active {
+    outline: none;
+}
+.btn-circle:hover, .btn-circle:focus {
+    outline: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+.btn-circle:hover i.animated {
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+}
+.row .scroll-down {
+    height: 100px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*-----------------------------------------------
+   About Content
+-----------------------------------------------*/
+
+.content-section {
+    height: auto;
+    padding-top: 40px;
+    background-color: #fff;
+    color: #202629;
+}
+.img-circle {
+    height: 60%;
+    width: 60%;
+    padding: 3px;
+    border: solid 1.5px;
+    border-color: #294D5B;
+}
+
+/*-----------------------------------------------
+   Content with background
+-----------------------------------------------*/
+
+.background-section {
+    width: 100%;
+    padding: 50px 0;
+    color: white;
+    background: url(../resources/background01.jpg) no-repeat bottom center fixed;
+    background-color: #D7CFBC;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+@media (min-width: 767px) {
+    .content-section {
+        padding-top: 150px;
+    }
+    .background-section {
+        padding: 150px 0;
+    }
+}
+
+/*-----------------------------------------------
+   Buttons
+-----------------------------------------------*/
+
+
+/*.btn {
+  text-transform: uppercase;
+  font-weight: 300;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0;
+}*/
+
+.btn-default {
+    text-transform: uppercase;
+    font-weight: 300;
+    border: 3px double #fff;
+    border-spacing: 6px;
+    color: #fff;
+    background-color: transparent;
+    padding: 5px;
+    transition: 0.2s ease-in-out;
+    outline: none;
+    display: inline-block;
+}
+.btn-default:active {
+    outline: none;
+}
+.btn-default:hover, .btn-default:focus {
+    border: 3px double #fff;
+    border-spacing: 6px;
+    outline: none;
+    color: #fff;
+    background-color: #3F7074;
+    opacity: 0.8;
+    outline: none;
+}
+#contact a {
+    color: #fff;
+}
+#contact a:hover, #contact a:focus {
+    color: #3F7074;
+    opacity: 0.8;
+}
+ul.banner-social-buttons {
+    margin-top: 25px;
+}
+@media (max-width: 1199px) {
+    ul.banner-social-buttons {
+        margin-top: 15px;
+    }
+}
+@media (max-width: 767px) {
+    ul.banner-social-buttons li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    ul.banner-social-buttons li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/*-----------------------------------------------
+   Footer
+-----------------------------------------------*/
+
+footer {
+    padding: 40px 0;
+}
+footer p {
+    margin: 0;
+}
+footer .footer-credits {
+    padding-top: 20px;
+}
+
+/*-----------------------------------------------
+   Animation
+-----------------------------------------------*/
+
+@-webkit-keyframes pulse {
+    0%, 100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+@-moz-keyframes pulse {
+    0%, 100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+@-webkit-keyframes blink {
+    0%, 100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@-moz-keyframes blink {
+    0%, 100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/*-----------------------------------------------
+   Form
+
+.form {
+  height: 0;
+  margin-bottom: 20px;
+  opacity: 0;
+  visibility: hidden;
+}
+.form.is-visible {
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.form-input {
+  border: 1px solid #b6b6b6;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+}
+-----------------------------------------------*/
