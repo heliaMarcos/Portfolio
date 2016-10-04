@@ -63,8 +63,8 @@ a:active, a:hover, a:focus {
     opacity: 0.9;
 }
 .navbar-custom .navbar-toggle {
-    color: #BE7C5C;
-    background-color: #3F7074;
+    color: #fff;
+    background-color: transparent;
     font-size: 12px;
 }
 .navbar-custom .navbar-toggle:focus, .navbar-custom .navbar-toggle:active {
