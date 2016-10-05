@@ -95,9 +95,9 @@ a:active {
     text-transform: uppercase;
 
 }
-.navbar-custom .navbar-brand:hover i.blinking {
+.navbar-custom .navbar-brand:hover span.blinking {
     animation-name: blink;
-    animation-duration: 0.5s;
+    animation-duration: 0.9s;
     animation-iteration-count: infinite;
 }
 @media (min-width: 768px) {
