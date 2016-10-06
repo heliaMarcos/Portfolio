@@ -6,11 +6,11 @@
 
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta name='description' content='Front-end Developer Personal Website.'>
+    <meta name='description' content='Front-end Developer'>
     <meta name='keywords' content='frontend, developer, portfolio, helia marcos, web developer, webdesign'>
 
     <link rel='stylesheet' media='all' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-    <link rel='stylesheet' media="all" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' media='all' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Mono:300'>
     <link rel='icon' href='resources/favicon.png'>
@@ -20,9 +20,10 @@
 
 <body id='page-top'>
 
-    <header class='navbar navbar-custom navbar-fixed-top' role='navigation'>
+    <!-- Navigation bar -->
+    <header class='navbar navbar-custom navbar-fixed-top'>
         <nav class='container'>
-            <div class='navbar-header'>
+            <div class='navbar-header' role='navigation'>
                 <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='.navbar-collapse'>
                     <i class='fa fa-bars fa-lg'></i>
                     <span class='sr-only'>Toggle navigation</span>
@@ -31,45 +32,38 @@
                     <span class='fa fa-angle-right'></span><span class='blinking'>_ </span><span class='light'>Hélia</span> Marcos
                 </a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- Collect the content for toggling -->
             <ul class='nav navbar-nav navbar-right collapse navbar-collapse'>
-                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                <li class='hidden'>
-                    <a href='#page-top'></a>
-                </li>
-                <li>
-                    <a class='page-scroll' href='#about'>About</a>
-                </li>
-                <li>
-                    <a  class='page-scroll' href='#projects'>Projects</a>
-                </li>
-                <li>
-                    <a class='page-scroll' href='#contact'>Contact</a>
-                </li>
+                <li><a class='page-scroll' href='#about'>About</a></li>
+                <li><a class='page-scroll' href='#projects'>Projects</a></li>
+                <li><a class='page-scroll' href='#contact'>Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- - Modal -
     <div class='modal js-modal'>
         <div class='modal-media'>
-            <span class='glyphicon glyphicon-envelope' <h3 class='modal-media-title'>Hélia Marcos</h3>
-                </div>
-                <div class='modal-content'>
-                    <h3>Contact me</h3>
-                    <form></form>
-                </div>
-            </div>
-    <div class='modal-overlay js-modal-overlay'></div>
+            <span class='glyphicon glyphicon-envelope'></span>
+            <h3 class='modal-media-title'></h3>
+        </div>
+        <div class='modal-content'>
+            <h3>Contact me</h3>
+            <form></form>
+        </div>
+    </div>
+    <div class='modal-overlay js-modal-overlay'></div> -->
 
+    <!-- Intro Section -->
     <header class='intro'>
         <div class='intro-body'>
             <div class='container'>
                 <div class='row'>
-                  <div class='col-md-8 col-md-offset-2'>
-                    <h1 class='brand-heading'></h1>
-                    <p class='intro-text'>Hello world! I'm Hélia, a newly made developer looking for an opportunity to learn and grow in front-end development.</p>
-                    <a class='js-show-modal' id='contact-link' href='#'><button class='btn-default'>Say Hi!</button></a>
-                  </div>
+                    <div class='col-md-8 col-md-offset-2'>
+                        <h1 class='brand-heading'></h1>
+                        <p class='intro-text'>Hello world! I'm Hélia, a newly made developer looking for an opportunity to learn and grow in front-end development.</p>
+                        <a href='mailto:helia.marcos@gmail.com' target="_top"><span class='btn-default' id='contact-link'>Say Hi!</span></a>
+                    </div>
                 </div>
             </div>
             <a href='#about' class='btn btn-circle page-scroll scroll-down hidden-xs'>
@@ -78,91 +72,95 @@
         </div>
     </header>
 
-
     <!-- About Section -->
     <section id='about' class='container content-section text-center'>
         <div class='row'>
-            <div class='col-sm-6'>
-
-              <img class='img-circle img-fluid' src='resources/profile.jpg'/>
+            <h3 class="about-title">About me</h3>
+            <div class='col-sm-6 profile-photo'>
+                <img class='img-circle img-fluid' src='resources/profile.jpg' alt='profile photo' />
             </div>
-            <div class='col-sm-5 col-sm-pull-1'>
-              <h3>About me</h3>
-                <p>I'm a Photographer and Front-End Developer from Porto. I just finished a Java and JavaScript programming bootcamp at <a href='http://academiadecodigo.org' target='_blank'>&lsaquo;Academia de Código_&rsaquo;</a>.</p>
-                <p>If you want to know more details about my professional and academic path take a look at my <a href='http://heliamarcos.github.io/HeliaMarcos_CV.pdf' itemprop='url'><span itemprop='name'>Resumé</span></a>.</p>
-          </div>
+            <div class='col-sm-6 aboutme'>
+                <p>I’m a photographer and front-end developer from Porto, Portugal. Recently I finished a 3 months Java and Javascript bootcamp at <a href='http://academiadecodigo.org' target='_blank'>&lsaquo;Academia de Código_&rsaquo;</a>.</p>
+                <p>I’m starting my career as a developer so I have a long way to go;
+                   but even if I'm new in programming I have the will to learn and I’m a good googler, a valuable skill in the programming field, as everyday there's new technologies and tools coming out.
+                   Apart from that, my artistic path helped me to acquire an eye for detail. These two skills combined hopefully will help me grow fast in front-end development.</p>
+                <p>I’m currently searching for a position as a front-end web developer and willing to start as soon as possible.</p>
+                <p>If you want to know more details about my professional and academic path take a look at my <a href='http://heliamarcos.github.io/HeliaMarcos_CV.pdf' target='_blank'>Resumé</a>. And feel free to contact me!</p>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id='projects' class='content-section text-center'>
+    <section id='projects' class='text-center'>
         <div class='background-section'>
             <div class='container'>
                 <div class='col-sm-8 col-sm-offset-2'>
                     <h3>Projects</h3>
-                    <p>You can see some of my projects here.</p>
-                  </div>
-                  <div class="col-sm-4"><a href='' class='caret'>Code/Design</a></div>
-                  <div class="col-sm-4"><a href='' class='caret'>Photography</a></div>
-                  <div class="col-sm-4"><a href='' class='caret'>Video</a></div>
+                </div>
+                <div class='col-sm-4'><a href=''><span class="btn-default">Code/Design</span></a></div>
+                <div class='col-sm-4'><a href=''><span class="btn-default">Photography</span></a></div>
+                <div class='col-sm-4'><a href=''><span class="btn-default">Video</span></a></div>
             </div>
         </div>
     </section>
 
-    <section id='' class='content-section text-center'>
-    <div class='container'>
-      <div class='col-lg-8 col-lg-offset-2'>
-          <h3>Um titulo aqui</h3>
-          <p>E aqui algum texto...</p>
-      </div>
-  </div>
-</section>
-
     <!-- Contact Section -->
-    <section id='contact' class='content-section text-center'>
-      <div class='background-section'>
+    <section id='contact' class='container content-section text-center'>
+      <div class="row">
         <div class='container'>
-            <div class='col-sm-8 col-sm-offset-2'>
-                <h3>Contact</h3>
-                <p>Feel free to email me.</p>
-                <p>helia.marcos [at] gmail [dot] com</p>
-                <ul class='list-inline banner-social-buttons'>
-                    <li>
-                        <a href='https://twitter.com/cizinec_' target='_blank'><i class='fa fa-twitter fa-2x fa-fw'></i></a>
-            </li>
-            <li>
-                <a href='https://github.com/heliaMarcos' target='_blank'><i class='fa fa-github fa-2x fa-fw'></i></a>
-            </li>
-            <li>
-                <a href='https://linkedin.com/in/helia-marcos' target='_blank'><i class='fa fa-linkedin fa-2x fa-fw'></i></a>
-            </li>
-            </ul>
+            <div class='col-lg-8 col-lg-offset-2'>
+              <h3>Contact</h3>
+              <p>Feel free to email me.</p>
+              <p>helia.marcos [at] gmail [dot] com</p>
+              <ul class='list-inline banner-social-buttons'>
+                  <li>
+                      <a href='https://twitter.com/cizinec_' target='_blank'><i class='fa fa-twitter fa-2x fa-fw'></i></a>
+                  </li>
+                  <li>
+                      <a href='https://github.com/heliaMarcos' target='_blank'><i class='fa fa-github fa-2x fa-fw'></i></a>
+                  </li>
+                  <li>
+                      <a href='https://linkedin.com/in/helia-marcos' target='_blank'><i class='fa fa-linkedin fa-2x fa-fw'></i></a>
+                  </li>
+              </ul>
+            </div>
         </div>
-    </div>
-    </div>
+      </div>
     </section>
 
-    <footer class='container-fluid text-center'>
-        <a class='up-arrow page-scroll' href='#page-top'>
-            <i class='fa fa-angle-up fa-lg'></i>
-            <p></p>top
-        </a>
-        <p class='footer-credits'>Coded and Designed by me</p>
+    <footer class='text-center'>
+      <div class='background-section'>
+          <div class='container'>
+            <a class='up-arrow page-scroll' href='#page-top'>
+              <i class='fa fa-angle-up fa-lg'></i>
+              <p></p>top
+            </a>
+            <p class='footer-credits'>Coded and Designed by me</p>
+          </div>
+      </div>
     </footer>
 
     <script src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js' integrity='sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU' crossorigin='anonymous'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
     <script src='js/app.js'></script>
+    <!-- for Analytics -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-85197320-1', 'auto');
-      ga('send', 'pageview');
-
+        ga('create', 'UA-85197320-1', 'auto');
+        ga('send', 'pageview');
     </script>
 </body>
+
 </html>

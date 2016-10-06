@@ -11,7 +11,6 @@
 *
 *************************************************/
 
-
 /*-----------------------------------------------
    Base
 -----------------------------------------------*/
@@ -23,24 +22,24 @@ body {
     font-size: 16px;
     height: 100%;
     line-height: 2;
-    width: 100%;
     webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
 }
 html {
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 h2, h3, h4, h5, h6 {
+    letter-spacing: 1px;
+    margin-top: 0;
     padding-bottom: 20px;
     padding-top: 30px;
-    margin-top: 0;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 ol, ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    list-style-type: none;
 }
 a {
     color: #BE7C5C;
@@ -48,11 +47,15 @@ a {
 }
 a:hover, a:focus {
     color: #3F7074;
-    text-decoration: none;
     outline: none;
+    text-decoration: none;
 }
 a:active {
   outline: none;
+}
+
+p {
+  margin: 0 0 0px;
 }
 
 /*-----------------------------------------------
@@ -60,14 +63,14 @@ a:active {
 -----------------------------------------------*/
 
 .navbar-custom {
-    margin-bottom: 0;
-    font-family: 'Roboto Mono', Helvetica, Arial, monospace;
     background-color: #3F7074;
+    font-family: 'Roboto Mono', Helvetica, Arial, monospace;
+    margin-bottom: 0;
     opacity: 0.9;
 }
 .navbar-custom .navbar-toggle {
-    color: #fff;
     background-color: transparent;
+    color: #fff;
     font-size: 12px;
     padding: 5px 10px;
 }
@@ -83,8 +86,8 @@ a:active {
     transition: 0.3s ease-in-out;
 }
 .navbar-custom .navbar-nav a:hover {
-    color: #BE7C5C;
     background-color: transparent;
+    color: #BE7C5C;
 }
 .navbar-custom .navbar-nav a:focus,
 .navbar-custom .navbar-nav a:active {
@@ -102,17 +105,17 @@ a:active {
 }
 @media (min-width: 768px) {
   .navbar-custom {
-    padding: 10px 0;
+    background: #3F7074;
     border-bottom: none;
     letter-spacing: 1px;
-    background: #3F7074;
+    padding: 10px 0;
     -webkit-transition: opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
     -moz-transition: opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
     transition: opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
   }
   .navbar-custom.top-nav-collapse {
-    padding: 0;
     opacity: 0.5;
+    padding: 0;
   }
 }
 
@@ -177,29 +180,28 @@ a:active {
 -----------------------------------------------*/
 
 .intro {
-    display: table;
     background: url(../resources/background01.jpg) no-repeat top center fixed;
     background-color: #D7CFBC;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    width: 100%;
+    color: #fff;
+    display: table;width: 100%;
     height: 100%;
     padding-top: 100px;
     padding-bottom: 30px;
     text-align: center;
-    color: #fff;
 }
 .intro .intro-body {
-    vertical-align: inherit;
-    top: 50%;
     bottom: -50%;
+    top: 50%;
+    vertical-align: inherit;
 }
 .intro .intro-body .intro-text {
     font-size: 22px;
-    padding: 180px auto;
     margin-bottom: 80px;
+    padding: 180px auto;
 }
 
 /*-----------------------------------------------
@@ -207,30 +209,30 @@ a:active {
 -----------------------------------------------*/
 
 .btn-circle {
-    width: 60px;
-    height: 60px;
-    margin-top: 10px;
-    padding: 7px 16px;
+    background: transparent;
     border: 1px solid white;
     border-radius: 100% !important;
-    font-size: 35px;
+    bottom: 20px;
     color: white;
-    background: transparent;
+    column-fill: balance;
+    font-size: 35px;
+    height: 60px;
+    margin-top: 10px;
+    outline: none;
+    padding: 7px 16px;
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
     transition: background 0.3s ease-in-out;
-    outline: none;
-    column-fill: balance;
-    bottom: 20px;
     transform: translateY(50%);
+    width: 60px;
 }
 .btn-circle:active {
     outline: none;
 }
 .btn-circle:hover, .btn-circle:focus {
-    outline: none;
-    color: white;
     background: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
 }
 .btn-circle:hover i.animated {
     -webkit-animation-name: pulse;
@@ -243,10 +245,10 @@ a:active {
     -moz-animation-timing-function: linear;
 }
 a.scroll-down {
+    bottom: 20px;
     left: 50%;
     margin-top: 20px;
     position: absolute;
-    bottom: 20px;
     transform: translateX(-50%);
 }
 
@@ -255,17 +257,37 @@ a.scroll-down {
 -----------------------------------------------*/
 
 .content-section {
-    height: auto;
-    padding-top: 40px;
     background-color: #fff;
     color: #202629;
 }
 .img-circle {
-    height: 60%;
-    width: 60%;
-    padding: 3px;
     border: solid 1.5px;
     border-color: #294D5B;
+    height: 70%;
+    padding: 3px;
+    width: 70%;
+}
+.aboutme {
+    text-align: justify;
+    padding-top: 10px;
+}
+.profile-photo {
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.about-title {
+    padding-top: 30px;
+}
+
+@media (max-width: 767px) {
+  .profile-photo {
+    margin-top: 10px;
+  }
+  .aboutme {
+    text-align: center;
+    padding: 20px;
+  }
 }
 
 /*-----------------------------------------------
@@ -273,22 +295,22 @@ a.scroll-down {
 -----------------------------------------------*/
 
 .background-section {
-    width: 100%;
-    padding: 50px 0;
-    color: white;
     background: url(../resources/background01.jpg) no-repeat bottom center fixed;
     background-color: #D7CFBC;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    color: white;
+    padding: 50px 0;
+    width: 100%;
 }
 @media (min-width: 767px) {
-    .content-section {
-        padding-top: 150px;
-    }
     .background-section {
-        padding: 150px 0;
+        padding: 50px 0;
+    }
+    .content-section {
+        padding: 60px 0;
     }
 }
 
@@ -296,49 +318,39 @@ a.scroll-down {
    Buttons
 -----------------------------------------------*/
 
-
-/*.btn {
-  text-transform: uppercase;
-  font-weight: 300;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  border-radius: 0;
-}*/
-
 .btn-default {
-    text-transform: uppercase;
-    font-weight: 300;
     border: 3px double #fff;
     border-spacing: 6px;
-    color: #fff;
     background-color: transparent;
-    padding: 5px;
-    transition: 0.2s ease-in-out;
-    outline: none;
+    color: #fff;
     display: inline-block;
+    font-weight: 300;
+    outline: none;
+    padding: 5px;
+    text-transform: uppercase;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
 }
 .btn-default:active {
     outline: none;
 }
 .btn-default:hover, .btn-default:focus {
+    background-color: #3F7074;
     border: 3px double #fff;
     border-spacing: 6px;
-    outline: none;
     color: #fff;
-    background-color: #3F7074;
-    opacity: 0.8;
     outline: none;
+    opacity: 0.8;
 }
 #contact a {
-    color: #fff;
+    color: #202629;
 }
 #contact a:hover, #contact a:focus {
-    color: #3F7074;
-    opacity: 0.8;
+    color: #BE7C5C;
 }
 ul.banner-social-buttons {
-    margin-top: 25px;
+    margin: 25px 0;
 }
 @media (max-width: 1199px) {
     ul.banner-social-buttons {
@@ -360,14 +372,15 @@ ul.banner-social-buttons {
    Footer
 -----------------------------------------------*/
 
-footer {
-    padding: 40px 0;
-}
-footer p {
-    margin: 0;
-}
 footer .footer-credits {
-    padding-top: 20px;
+    height: auto;
+    margin: 0 0 0px;
+}
+footer.background-section {
+  padding: 50px 0;
+}
+footer a {
+  color: #fff;
 }
 
 /*-----------------------------------------------
@@ -444,3 +457,10 @@ footer .footer-credits {
   width: 100%;
 }
 -----------------------------------------------*/
+
+#projects .background-section {
+  padding-bottom: 100px;
+}
+#projects h3 {
+  padding-bottom: 50px;
+}
