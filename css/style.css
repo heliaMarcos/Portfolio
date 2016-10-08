@@ -11,9 +11,6 @@
 *
 *************************************************/
 
-/*-----------------------------------------------
-   Base
------------------------------------------------*/
 
 body {
     background-color: #fff;
@@ -51,11 +48,10 @@ a:hover, a:focus {
     text-decoration: none;
 }
 a:active {
-  outline: none;
+    outline: none;
 }
-
 p {
-  margin: 0 0 0px;
+    margin: 0 0 0px;
 }
 
 /*-----------------------------------------------
@@ -89,14 +85,12 @@ p {
     background-color: transparent;
     color: #BE7C5C;
 }
-.navbar-custom .navbar-nav a:focus,
-.navbar-custom .navbar-nav a:active {
-  background-color: transparent;
+.navbar-custom .navbar-nav a:focus, .navbar-custom .navbar-nav a:active {
+    background-color: transparent;
 }
 .navbar-custom .navbar-brand {
     font-size: 22px;
     text-transform: uppercase;
-
 }
 .navbar-custom .navbar-brand:hover span.blinking {
     animation-name: blink;
@@ -104,75 +98,19 @@ p {
     animation-iteration-count: infinite;
 }
 @media (min-width: 768px) {
-  .navbar-custom {
-    background: #3F7074;
-    border-bottom: none;
-    letter-spacing: 1px;
-    padding: 10px 0;
-    -webkit-transition: opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
-    -moz-transition: opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
-    transition: opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
-  }
-  .navbar-custom.top-nav-collapse {
-    opacity: 0.5;
-    padding: 0;
-  }
-}
-
-/*-----------------------------------------------
-   Modal
------------------------------------------------*/
-
-.modal {
-    background-color: #fff;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
-    left: 50%;
-    opacity: 0;
-    position: absolute;
-    top: 40px;
-    transform: translate(-50%, -5%);
-    transition: 0.4s ease-in-out;
-    visibility: hidden;
-    width: 500px;
-    z-index: 2;
-}
-.modal.is-visible {
-    opacity: 1;
-    transform: translate(-50%, 0);
-    visibility: visible;
-}
-.modal-media {
-    position: relative;
-}
-.modal-media-title {
-    color: #fff;
-    bottom: 20px;
-    left: 20px;
-    font-size: 30px;
-    position: absolute;
-}
-.modal-content {
-    padding: 20px;
-}
-.modal-overlay {
-    background-color: #202629;
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transition: 0.4s ease-in-out;
-    visibility: hidden;
-    width: 100%;
-    z-index: 1;
-}
-.modal-overlay.is-visible {
-    opacity: 0.4;
-    visibility: visible;
+    .navbar-custom {
+        background: #3F7074;
+        border-bottom: none;
+        letter-spacing: 1px;
+        padding: 10px 0;
+        -webkit-transition: opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
+        -moz-transition: opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
+        transition: opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
+    }
+    .navbar-custom.top-nav-collapse {
+        opacity: 0.5;
+        padding: 0;
+    }
 }
 
 /*-----------------------------------------------
@@ -187,11 +125,13 @@ p {
     -moz-background-size: cover;
     -o-background-size: cover;
     color: #fff;
-    display: table;width: 100%;
+    display: table;
+    width: 100%;
     height: 100%;
     padding-top: 100px;
     padding-bottom: 30px;
     text-align: center;
+    z-index: 1;
 }
 .intro .intro-body {
     bottom: -50%;
@@ -279,15 +219,14 @@ a.scroll-down {
 .about-title {
     padding-top: 30px;
 }
-
 @media (max-width: 767px) {
-  .profile-photo {
-    margin-top: 10px;
-  }
-  .aboutme {
-    text-align: center;
-    padding: 20px;
-  }
+    .profile-photo {
+        margin-top: 10px;
+    }
+    .aboutme {
+        text-align: center;
+        padding: 20px;
+    }
 }
 
 /*-----------------------------------------------
@@ -374,13 +313,13 @@ ul.banner-social-buttons {
 
 footer .footer-credits {
     height: auto;
-    margin: 0 0 0px;
+    margin: 30px 0 0 0px;
 }
 footer.background-section {
-  padding: 50px 0;
+    padding: 50px 0;
 }
 footer a {
-  color: #fff;
+    color: #fff;
 }
 
 /*-----------------------------------------------
@@ -430,37 +369,129 @@ footer a {
 
 /*-----------------------------------------------
    Form
+-----------------------------------------------*/
 
-.form {
-  height: 0;
-  margin-bottom: 20px;
+.floating-label-form-group {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0.5em;
+    border-bottom: 0.5px solid #888888;
+}
+.floating-label-form-group input, .floating-label-form-group textarea {
+    z-index: 1;
+    position: relative;
+    padding-right: 0;
+    padding-left: 0;
+    border: none;
+    border-radius: 0;
+    background: none;
+    box-shadow: none !important;
+    resize: none;
+}
+.floating-label-form-group label {
+    display: block;
+    z-index: 0;
+    position: relative;
+    top: 2em;
+    margin: 0;
+    font-size: 0.85em;
+    line-height: 1.764705882em;
+    vertical-align: middle;
+    vertical-align: baseline;
+    opacity: 0;
+    -webkit-transition: top 0.3s ease, opacity 0.3s ease;
+    -moz-transition: top 0.3s ease, opacity 0.3s ease;
+    -ms-transition: top 0.3s ease, opacity 0.3s ease;
+    transition: top 0.3s ease, opacity 0.3s ease;
+}
+.floating-label-form-group:not(:first-child) {
+    padding-left: 14px;
+    border-left: 0.5px solid #888888;
+}
+.floating-label-form-group-with-value label {
+    top: 0;
+    opacity: 1;
+}
+.floating-label-form-group-with-focus label {
+    color: #888888;
+}
+form .row:first-child .floating-label-form-group {
+    border-top: 0.5px solid #888888;
+}
+form .btn-default {
+    color: #BE7C5C;
+    border-color: #BE7C5C;
+}
+form .btn-default:hover {
+    background-color: #BE7C5C;
+}
+
+
+/*-----------------------------------------------
+   Modal
+-----------------------------------------------*/
+
+.modal-form {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+  left: 50%;
   opacity: 0;
+  position: absolute;
+  text-align: center;
+  top: 75px;
+  transform: translate(-50%, -5%);
+  transition: 0.4s ease-in-out;
   visibility: hidden;
+  width: 400px;
+  z-index: 2;
 }
-.form.is-visible {
-  height: auto;
+
+.modal-form.is-visible {
   opacity: 1;
+  transform: translate(-50%, 0);
   visibility: visible;
-  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
-.form-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
+
+.modal-media-title {
+  color: #fff;
+  bottom: 20px;
+  left: 20px;
+  font-size: 30px;
+  position: absolute;
 }
-.form-input {
-  border: 1px solid #b6b6b6;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 20px;
-  padding: 10px;
+
+.modal-contents {
+  padding: 20px;
+}
+
+.modal-overlay {
+  background-color: #212121;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: 0.4s ease-in-out;
+  visibility: hidden;
   width: 100%;
+  z-index: 1;
 }
+
+.modal-overlay.is-visible {
+  opacity: 0.4;
+  visibility: visible;
+}
+
+/*-----------------------------------------------
+   Projects Section
 -----------------------------------------------*/
 
 #projects .background-section {
-  padding-bottom: 100px;
+    padding-bottom: 100px;
+    background-position: center;
 }
 #projects h3 {
-  padding-bottom: 50px;
+    padding-bottom: 50px;
 }

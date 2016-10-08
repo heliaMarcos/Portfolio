@@ -62,7 +62,7 @@
                     <div class='col-md-8 col-md-offset-2'>
                         <h1 class='brand-heading'></h1>
                         <p class='intro-text'>Hello world! I'm Hélia, a newly made developer looking for an opportunity to learn and grow in front-end development.</p>
-                        <a href='mailto:helia.marcos@gmail.com' target="_top"><span class='btn-default' id='contact-link'>Say Hi!</span></a>
+                        <a class='js-show-modal' href='#'><span class='btn-default' id='contact-link'>Say Hi!</span></a>
                     </div>
                 </div>
             </div>
@@ -75,17 +75,16 @@
     <!-- About Section -->
     <section id='about' class='container content-section text-center'>
         <div class='row'>
-            <h3 class="about-title">About me</h3>
+            <h3 class='about-title'>About me</h3>
             <div class='col-sm-6 profile-photo'>
                 <img class='img-circle img-fluid' src='resources/profile.jpg' alt='profile photo' />
             </div>
             <div class='col-sm-6 aboutme'>
                 <p>I’m a photographer and front-end developer from Porto, Portugal. Recently I finished a 3 months Java and Javascript bootcamp at <a href='http://academiadecodigo.org' target='_blank'>&lsaquo;Academia de Código_&rsaquo;</a>.</p>
-                <p>I’m starting my career as a developer so I have a long way to go;
-                   but even if I'm new in programming I have the will to learn and I’m a good googler, a valuable skill in the programming field, as everyday there's new technologies and tools coming out.
-                   Apart from that, my artistic path helped me to acquire an eye for detail. These two skills combined hopefully will help me grow fast in front-end development.</p>
+                <p>I’m starting my career as a developer so I have a long way to go; but even if I'm new to programming I have the will to learn and I’m a good googler, a valuable skill in the programming field, as everyday there are new technologies and
+                    tools coming out. Apart from that, my artistic path helped me to acquire an eye for detail. These two skills combined hopefully will help me grow fast in front-end development.</p>
                 <p>I’m currently searching for a position as a front-end web developer and willing to start as soon as possible.</p>
-                <p>If you want to know more details about my professional and academic path take a look at my <a href='http://heliamarcos.github.io/HeliaMarcos_CV.pdf' target='_blank'>Resumé</a>. And feel free to contact me!</p>
+                <p>If you want to know more details about my professional and academic path take a look at my <a href='http://heliamarcos.github.io/resources/HeliaMarcos_CV.pdf' target='_blank'>Résumé</a>.</p>
             </div>
         </div>
     </section>
@@ -97,48 +96,84 @@
                 <div class='col-sm-8 col-sm-offset-2'>
                     <h3>Projects</h3>
                 </div>
-                <div class='col-sm-4'><a href=''><span class="btn-default">Code/Design</span></a></div>
-                <div class='col-sm-4'><a href=''><span class="btn-default">Photography</span></a></div>
-                <div class='col-sm-4'><a href=''><span class="btn-default">Video</span></a></div>
+                <div class='col-sm-4'><a href=''><span class='btn-default'>Code/Design</span></a></div>
+                <div class='col-sm-4'><a href=''><span class='btn-default'>Photography</span></a></div>
+                <div class='col-sm-4'><a href=''><span class='btn-default'>Video</span></a></div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id='contact' class='container content-section text-center'>
-      <div class="row">
-        <div class='container'>
-            <div class='col-lg-8 col-lg-offset-2'>
-              <h3>Contact</h3>
-              <p>Feel free to email me.</p>
-              <p>helia.marcos [at] gmail [dot] com</p>
-              <ul class='list-inline banner-social-buttons'>
-                  <li>
-                      <a href='https://twitter.com/cizinec_' target='_blank'><i class='fa fa-twitter fa-2x fa-fw'></i></a>
-                  </li>
-                  <li>
-                      <a href='https://github.com/heliaMarcos' target='_blank'><i class='fa fa-github fa-2x fa-fw'></i></a>
-                  </li>
-                  <li>
-                      <a href='https://linkedin.com/in/helia-marcos' target='_blank'><i class='fa fa-linkedin fa-2x fa-fw'></i></a>
-                  </li>
-              </ul>
+        <div class='row'>
+            <div class='container'>
+                <div class='col-sm-8 col-sm-offset-2'>
+                    <h3>Contact</h3>
+                    <p>Feel free to email me.</p>
+                    <p>helia.marcos [at] gmail [dot] com</p>
+                    <ul class='list-inline banner-social-buttons'>
+                        <li>
+                            <a href='https://twitter.com/cizinec_' target='_blank'><i class='fa fa-twitter fa-2x fa-fw'></i></a>
+                        </li>
+                        <li>
+                            <a href='https://github.com/heliaMarcos' target='_blank'><i class='fa fa-github fa-2x fa-fw'></i></a>
+                        </li>
+                        <li>
+                            <a href='https://linkedin.com/in/helia-marcos' target='_blank'><i class='fa fa-linkedin fa-2x fa-fw'></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-      </div>
     </section>
 
     <footer class='text-center'>
-      <div class='background-section'>
-          <div class='container'>
-            <a class='up-arrow page-scroll' href='#page-top'>
-              <i class='fa fa-angle-up fa-lg'></i>
-              <p></p>top
-            </a>
-            <p class='footer-credits'>Coded and Designed by me</p>
-          </div>
-      </div>
+        <div class='background-section'>
+            <div class='container'>
+                <a class='up-arrow page-scroll' href='#page-top'>
+                    <i class='fa fa-angle-up fa-lg'></i>
+                    <p></p>top
+                </a>
+                <p class='footer-credits'>Coded and Designed by me</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Contact Modal Section -->
+    <div class='modal-form js-modal'>
+        <div class='modal-contents'>
+            <h3>Contact Me</h3>
+            <form name='sentMessage' id='contactForm' novalidate>
+                <div class='row control-group'>
+                    <div class='form-group col-xs-12 floating-label-form-group controls'>
+                        <label>Name</label>
+                        <input type='text' class='form-control' placeholder='Name*' id='name' required data-validation-required-message='Please enter your name.'>
+                        <p class='help-block text-danger'></p>
+                    </div>
+                </div>
+                <div class='row control-group'>
+                    <div class='form-group col-xs-12 floating-label-form-group controls'>
+                        <label>Email Address</label>
+                        <input type='email' class='form-control' placeholder='Email Address*' id='email' required data-validation-required-message='Please enter your email address.'>
+                        <p class='help-block text-danger'></p>
+                    </div>
+                </div>
+                <div class='row control-group'>
+                    <div class='form-group col-xs-12 floating-label-form-group controls'>
+                        <label>Message</label>
+                        <textarea rows='5' class='form-control' placeholder='Message*' id='message' required data-validation-required-message='Please enter a message.'></textarea>
+                        <p class='help-block text-danger'></p>
+                    </div>
+                </div>
+                <br>
+                <div id='success'></div>
+                <div class='form-group col-xs-12'>
+                    <button type='submit' class='btn-default'>Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class='modal-overlay js-modal-overlay'></div>
 
     <script src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js' integrity='sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU' crossorigin='anonymous'></script>

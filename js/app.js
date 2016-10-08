@@ -1,5 +1,5 @@
 //-----------------------------------------------
-//   DOCUMENT READY
+//   Collapsable Navigation bar
 //-----------------------------------------------
 
 function collapseNavbar() {
@@ -25,17 +25,33 @@ $(document).ready(function() {
               scrollTop: $($anchor.attr('href')).offset().top
           }, 1500, 'easeInOutExpo');
           event.preventDefault();
-      });
+  });
+
+  $('body').on('input propertychange', '.floating-label-form-group', function(e) {
+      $(this).toggleClass('floating-label-form-group-with-value', !!$(e.target).val());
+  }).on('focus', '.floating-label-form-group', function() {
+      $(this).addClass('floating-label-form-group-with-focus');
+  }).on('blur', '.floating-label-form-group', function() {
+      $(this).removeClass('floating-label-form-group-with-focus');
+  });
+
+  //-----------------------------------------------
+  //   Carosel gallery
+  //-----------------------------------------------
+
+  $('project-btn').on('click', function(event){
+    $(this).toggleClass('carosel');
+  });
 
   //-----------------------------------------------
   //   Modal
   //-----------------------------------------------
 
   $('.js-show-modal').on('click', function(event) {
-    $('.js-modal').addClass('is-visible');
-    $('.js-modal-overlay').addClass('is-visible');
     event.preventDefault();
 
+    $('.js-modal').addClass('is-visible');
+    $('.js-modal-overlay').addClass('is-visible');
   });
 
   $('.js-modal-overlay').on('click', function(event) {
