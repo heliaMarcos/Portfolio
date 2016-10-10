@@ -39,8 +39,8 @@ ol, ul {
 }
 a, a:active {
     color: #BE7C5C;
-    transition: 0.3s ease-in-out;
     outline: none;
+    transition: 0.3s ease-in-out;
 }
 a:hover, a:focus {
     color: #3F7074;
@@ -123,11 +123,11 @@ p {
     -o-background-size: cover;
     color: #fff;
     display: table;
-    width: 100%;
     height: 100%;
     padding-top: 100px;
     padding-bottom: 30px;
     text-align: center;
+    width: 100%;
     z-index: 1;
 }
 .intro .intro-body {
@@ -205,13 +205,13 @@ a.scroll-down {
     width: 70%;
 }
 .aboutme {
-    text-align: justify;
     padding-top: 10px;
+    text-align: justify;
 }
 .profile-photo {
-    text-align: center;
     padding-top: 20px;
     padding-left: 30px;
+    text-align: center;
 }
 .about-title {
     padding-top: 30px;
@@ -221,8 +221,8 @@ a.scroll-down {
         margin-top: 10px;
     }
     .aboutme {
-        text-align: center;
         padding: 20px;
+        text-align: center;
     }
 }
 
@@ -269,8 +269,8 @@ a.scroll-down {
     -moz-transition: all 0.2s ease-in-out;
 }
 .btn-default:active {
-    outline: none;
     color: #fff;
+    outline: none;
 }
 .btn-default:hover, .btn-default:focus {
     background-color: #3F7074;
@@ -370,23 +370,28 @@ footer a {
 -----------------------------------------------*/
 
 #projects .background-section {
-    padding-bottom: 100px;
     background-position: center;
+    padding-bottom: 100px;
 }
 #projects h3 {
     padding: 100px 0;
 }
 #projects .col-sm-4 {
-  padding-left: 0;
+    padding-left: 0;
 }
+
+/*-----------------------------------------------
+   Carousel Modal
+-----------------------------------------------*/
+
 .carousel {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
-    opacity: 0;
-    visibility: hidden;
     margin-top: 60px;
+    opacity: 0;
     position: absolute;
     transition: 0.6s ease-in-out;
     transform: translate(-50%, -10%);
+    visibility: hidden;
     z-index: 2;
 }
 .carousel.is-visible {
@@ -395,17 +400,16 @@ footer a {
     visibility: visible;
 }
 .carousel-inner .item img {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
-.carousel-inner .btn-default,
-.carousel-inner .btn-default:active {
+.carousel-inner .btn-default, .carousel-inner .btn-default:active {
     color: #3F7074;
     margin-top: 20px;
 }
 .carousel-inner .btn-default:hover {
-    color: #fff;
     background-color: #3F7074;
+    color: #fff;
 }
 .carousel-control.left, .carousel-control.right {
     background-image: none;
@@ -413,55 +417,54 @@ footer a {
 }
 .carousel-control .icon-prev {
     color: #000;
-    text-shadow: none;
     left: 10%;
+    text-shadow: none;
 }
 .carousel-control .icon-next {
     color: #000;
-    text-shadow: none;
     right: 10%;
-    margin-right: 0;
+    text-shadow: none;
 }
 @media (max-width: 767px) {
     #projects .btn-default {
         margin-bottom: 20px;
     }
     .carousel {
-      width: 100%;
-      left: 50%;
+        left: 50%;
+        width: 100%;
     }
     .carousel-caption {
-      font-size: 12px;
-      padding: 0 0 0 0;
-      position: absolute;
-      background-color: #111111;
-      opacity: 0.8;
+        background-color: #111111;
+        font-size: 12px;
+        opacity: 0.8;
+        padding: 0 0 0 0;
+        position: absolute;
     }
     .carousel-caption .btn-default {
-      color: #fff;
+        color: #fff;
     }
-    .carousel-caption h4{
-      padding-bottom: 0;
-      padding-top: 15px;
+    .carousel-caption h4 {
+        padding-bottom: 0;
+        padding-top: 15px;
     }
 }
 @media (min-width: 767px) {
     .carousel-caption {
-        position: relative;
+        color: #202629;
         left: 0%;
-        right: 0%;
-        z-index: 10;
         padding-top: 30px;
         padding-bottom: 0px;
         padding-right: 10px;
-        color: #202629;
+        position: relative;
+        right: 0%;
         text-shadow: none;
+        z-index: 10;
     }
     .carousel {
         background-color: #fff;
-        width: 800px;
         left: 50%;
         transform: translateX(-50%);
+        width: 800px;
     }
     .col-sm-8 {
         padding-left: 0;
