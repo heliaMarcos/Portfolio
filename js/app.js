@@ -15,47 +15,37 @@ $(document).ready(collapseNavbar);
 
 $(document).ready(function() {
 
-  //-----------------------------------------------
-  //   Scroll animation
-  //-----------------------------------------------
+//-----------------------------------------------
+//   Scroll animation
+//-----------------------------------------------
 
-  $('a.page-scroll').bind('click', function(event) {
-          var $anchor = $(this);
-          $('html, body').stop().animate({
-              scrollTop: $($anchor.attr('href')).offset().top
-          }, 1500, 'easeInOutExpo');
-          event.preventDefault();
-  });
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
 
-  $('body').on('input propertychange', '.floating-label-form-group', function(e) {
-      $(this).toggleClass('floating-label-form-group-with-value', !!$(e.target).val());
-  }).on('focus', '.floating-label-form-group', function() {
-      $(this).addClass('floating-label-form-group-with-focus');
-  }).on('blur', '.floating-label-form-group', function() {
-      $(this).removeClass('floating-label-form-group-with-focus');
-  });
 
-  //-----------------------------------------------
-  //   Carosel gallery
-  //-----------------------------------------------
+//-----------------------------------------------
+//   Modal
+//-----------------------------------------------
 
-  $('project-btn').on('click', function(event){
-    $(this).toggleClass('carosel');
-  });
+    $('#projects').on('click', '.js-show-modal', function(event) {
+        event.preventDefault();
 
-  //-----------------------------------------------
-  //   Modal
-  //-----------------------------------------------
+        $(this).find('.js-modal').addClass('is-visible');
+        $('.js-modal-overlay').addClass('is-visible');
+    });
 
-  $('.js-show-modal').on('click', function(event) {
-    event.preventDefault();
+    $('.js-modal-overlay').on('click', function(event) {
+        $('.js-modal').removeClass('is-visible');
+        $('.js-modal-overlay').removeClass('is-visible');
+    });
+});
 
-    $('.js-modal').addClass('is-visible');
-    $('.js-modal-overlay').addClass('is-visible');
-  });
-
-  $('.js-modal-overlay').on('click', function(event) {
-    $('.js-modal').removeClass('is-visible');
-    $('.js-modal-overlay').removeClass('is-visible');
-  });
+$(window).bind('load resize slid.bs.carousel', function() {
+    var imageHeight = $('.active .holder').height();
+    $('.controllers').height(imageHeight);
 });
