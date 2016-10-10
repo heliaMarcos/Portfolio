@@ -29,7 +29,7 @@ h2, h3, h4, h5, h6 {
     letter-spacing: 1px;
     margin-top: 0;
     padding-bottom: 20px;
-    padding-top: 30px;
+    padding-top: 0;
     text-transform: uppercase;
 }
 ol, ul {
@@ -196,6 +196,7 @@ a.scroll-down {
 .content-section {
     background-color: #fff;
     color: #202629;
+    margin: 50px auto;
 }
 .img-circle {
     border: solid 1.5px;
@@ -212,9 +213,6 @@ a.scroll-down {
     padding-top: 20px;
     padding-left: 30px;
     text-align: center;
-}
-.about-title {
-    padding-top: 30px;
 }
 @media (max-width: 767px) {
     .profile-photo {
@@ -379,6 +377,9 @@ footer a {
 #projects .col-sm-4 {
     padding-left: 0;
 }
+#projects .row {
+  margin-bottom: 50px;
+}
 
 /*-----------------------------------------------
    Carousel Modal
@@ -452,7 +453,7 @@ footer a {
     .carousel-caption {
         color: #202629;
         left: 0%;
-        padding-top: 30px;
+        padding-top: 100px;
         padding-bottom: 0px;
         padding-right: 10px;
         position: relative;
