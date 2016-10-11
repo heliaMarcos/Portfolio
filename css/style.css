@@ -459,7 +459,6 @@ footer a {
         position: relative;
         right: 0%;
         text-shadow: none;
-        z-index: 10;
     }
     .carousel {
         background-color: #fff;

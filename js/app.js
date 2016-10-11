@@ -16,6 +16,21 @@ $(document).ready(collapseNavbar);
 $(document).ready(function() {
 
 //-----------------------------------------------
+//   Carousel links
+//-----------------------------------------------
+
+  $('.item').on('click', function() {
+    console.log('Going to: ' + $(this).find('a').attr('href'));
+
+    window.location = $(this).find('a').attr('href');
+  });
+
+  $(window).bind("load resize slid.bs.carousel", function() {
+      var imageHeight = $(".active .holder").height();
+      $(".controllers").height(imageHeight);
+  });
+
+//-----------------------------------------------
 //   Scroll animation
 //-----------------------------------------------
 
@@ -43,9 +58,4 @@ $(document).ready(function() {
         $('.js-modal').removeClass('is-visible');
         $('.js-modal-overlay').removeClass('is-visible');
     });
-});
-
-$(window).bind('load resize slid.bs.carousel', function() {
-    var imageHeight = $('.active .holder').height();
-    $('.controllers').height(imageHeight);
 });
